@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_practice54_hw7/screens/screen2.dart';
 
 class HomeScreen extends StatelessWidget {
+  static const String id = "/home_screen";
   const HomeScreen({
     super.key,
   });
@@ -113,7 +115,9 @@ class HomeScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(14),
                         border: Border.all(color: Colors.black, width: 3)),
                     child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, Screen2.id);
+                      },
                       child: const Text(
                         "Book a Demo",
                         style: TextStyle(fontSize: 19, color: Colors.black),
@@ -129,7 +133,9 @@ class HomeScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(14),
                         border: Border.all(color: Colors.black, width: 3)),
                     child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, Screen2.id);
+                      },
                       child: const Text(
                         "Start for free",
                         style: TextStyle(fontSize: 19, color: Colors.white),

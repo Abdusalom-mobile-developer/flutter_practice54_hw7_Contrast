@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_practice54_hw7/screens/home.dart';
+import 'package:flutter_practice54_hw7/screens/screen2.dart';
+import 'package:flutter_practice54_hw7/screens/screen3.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,9 +14,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: const HomeScreen(),
+      routes: {
+        HomeScreen.id: (context) => const HomeScreen(),
+        Screen2.id: (context) => const Screen2(),
+        Screen3.id: (context) => const Screen3(),
+      },
     );
   }
 }
